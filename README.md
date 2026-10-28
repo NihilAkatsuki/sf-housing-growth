@@ -35,7 +35,7 @@ From 2005 to 2025, how did housing growth vary across San Francisco neighborhood
 
 **Relevance:** This dataset helps provide geographic context for housing development by identifying the land uses associated with different areas of San Francisco. The relevant columns include mapblklot, residential\_units, residential\_use, and geography\_type. We can use it alongside the housing production data to understand where housing development occurs and connect housing growth to neighborhood characteristics.
 
-**3\. American Community Survey (ACS) 5-Year Estimates (Public Domain)**
+## **3\. American Community Survey (ACS) 5-Year Estimates (Public Domain)**
 
 * **Coverage**: Socioeconomic and housing characteristics for census tracts in San Francisco County. Two tables are used: [Median Household Income in the Past 12 Months](https://data.census.gov/table/ACSDT5Y2020.B19013?q=B19013&g=040XX00US06_050XX00US06075,06075$1400000) (referred to as B19013) and [Tenure: Owner-Occupied vs. Renter-Occupied Units](https://data.census.gov/table?q=B25003+&g=040XX00US06,06$1400000_050XX00US06075,06075$1400000) (referred to as B25003).  
 * **Granularity**: Census tract level, with one record per tract.  
@@ -44,6 +44,16 @@ From 2005 to 2025, how did housing growth vary across San Francisco neighborhood
 * **Source**: U.S. Census Bureau, American Community Survey, 2024 5-Year Estimates (covering 2020–2024).
 
 **Relevance**: These two tables supply the neighborhood-level socioeconomic characteristics that are central to our research questions. B19013 allows us to classify tracts by income level, and B25003 allows us to classify tracts by renter share. Using these datasets, we can compare whether historically lower-income or higher-renter-share neighborhoods experienced different levels of housing growth and whether the Family Zoning Plan allocates future capacity differently across these groups.
+
+## 4. [Census 2020: Tracts for San Francisco | DataSF](https://data.sf.gov/Geographic-Locations-and-Boundaries/Census-2020-Tracts-for-San-Francisco/tmph-tgz9/about_data) (Public Domain)
+
+- **Coverage:** Geographic boundaries of the 244 census tracts in San Francisco, based on the 2020 U.S. Census.
+- **Granularity:** Census tract level, with one record representing each tract.
+- **Type:** Structured geospatial data containing tract identifiers and polygon geometries.
+- **Format:** Downloadable CSV containing geographic boundaries in WKT format.
+- **Source:** City and County of San Francisco, through DataSF, based on U.S. Census Bureau 2020 boundaries.
+
+**Relevance:** This dataset provides consistent geographic boundaries for our neighborhood-level analysis. The relevant columns include `GEOID` and `the_geom`. We use spatial joins to assign housing production records and land-use parcels to census tracts, allowing us to aggregate housing units by tract and connect housing growth with ACS income and renter-share data.
 
 # 3\. Methods & Techniques
 
