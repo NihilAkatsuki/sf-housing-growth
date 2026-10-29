@@ -15,7 +15,9 @@ From 2005 to 2025, how did housing growth vary across San Francisco neighborhood
 
 # 2\. Data Description
 
-## **1\. [Housing Production \- 2005-present | DataSF](https://data.sfgov.org/widgets/xdht-4php) (Public Domain)**
+## **1\. [Housing Production \- 2005-present | DataSF](https://data.sf.gov/api/views/xdht-4php/rows.csv?accessType=DOWNLOAD) (Public Domain)**
+
+*Click the title to download the CSV file.*
 
 * **Coverage:** San Francisco housing development data from 2005 to the present, covering building permit applications and housing production across the city.  
 * **Granularity:** Project/permit level, with each record corresponding to a building permit application and associated housing project information.  
@@ -25,7 +27,9 @@ From 2005 to 2025, how did housing growth vary across San Francisco neighborhood
 
 **Relevance:** This dataset provides information on housing production over our 2005–2025 time period. The relevant columns include Building Permit Application Number, Address, BlockLot, Affordable Units, Market Rate Units, Issued Date, Zoning District, and Project Affordability Type. We can use the address and permit information to identify where housing was produced, what type of housing was produced, and the number and type of units associated with each project.
 
-## **2\. [San Francisco Land Use | DataSF](https://data.sf.gov/Geographic-Locations-and-Boundaries/San-Francisco-Land-Use/c5ge-t6pj/about_data) (Public Domain)**
+## **2\. [San Francisco Land Use | DataSF](https://data.sf.gov/api/views/c5ge-t6pj/rows.csv?accessType=DOWNLOAD) (Public Domain)**
+
+*Click the title to download the CSV file.*
 
 * **Coverage:** Land use across San Francisco, including residential, commercial, mixed-use, and other land-use categories.  
 * **Granularity:** Parcel level, with individual records representing land parcels within San Francisco.  
@@ -45,7 +49,9 @@ From 2005 to 2025, how did housing growth vary across San Francisco neighborhood
 
 **Relevance**: These two tables supply the neighborhood-level socioeconomic characteristics that are central to our research questions. B19013 allows us to classify tracts by income level, and B25003 allows us to classify tracts by renter share. Using these datasets, we can compare whether historically lower-income or higher-renter-share neighborhoods experienced different levels of housing growth and whether the Family Zoning Plan allocates future capacity differently across these groups.
 
-## 4. [Census 2020: Tracts for San Francisco | DataSF](https://data.sf.gov/Geographic-Locations-and-Boundaries/Census-2020-Tracts-for-San-Francisco/tmph-tgz9/about_data) (Public Domain)
+## **4\. [Census 2020: Tracts for San Francisco | DataSF](https://data.sf.gov/api/views/tmph-tgz9/rows.csv?accessType=DOWNLOAD) (Public Domain)**
+
+*Click the title to download the CSV file.*
 
 - **Coverage:** Geographic boundaries of the 244 census tracts in San Francisco, based on the 2020 U.S. Census.
 - **Granularity:** Census tract level, with one record representing each tract.
