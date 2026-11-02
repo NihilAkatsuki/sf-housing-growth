@@ -4,13 +4,11 @@ Project: *Housing Growth, Neighborhood Inequality, and Zoning Capacity in San Fr
 
 ## Layout
 
-- `data/raw/` — original, unmodified downloads.
-- `data/processed/` — filtered, cleaned, joined and tract-level datasets.
-- `analysis/` — active Python implementations (one version per step).
-- `notebooks/` — exploration and teammates' notebooks.
-- `visualizations/` — figures referenced by the Midterm PDF.
-- `outputs/tables/` — comparison summaries and other presentation tables.
-- `docs/` — data-cleaning and method documentation.
+- `data/raw/` — Original, unmodified datasets.
+- `data/processed/` — Filtered, cleaned, joined and tract-level datasets.
+- `analysis/` — Python files for data processing, generating visualizations, and other repeated steps.
+- `notebooks/` — Our analysis notebook.
+- `visualizations/` — Figures referenced by the Midterm PDF.
 
 ## Install
 
