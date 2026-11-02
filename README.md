@@ -52,7 +52,7 @@ jupyter notebook
 ```
 Open `SF_Housing_Analysis_TrackB.ipynb` and select Kernel → Restart & Run All.
 
-The first notebook cell uses %cd .. to switch to the repository root, allowing all relative paths to data/ and imports from analysis/ to work correctly.
+The first notebook cell uses `%cd ..` to switch to the repository root, allowing all relative paths to `data/` and imports from `analysis/` to work correctly.
 The notebook imports and calls functions from the Python modules in `analysis/` to perform the full analysis.
 
 ### 2. View the outputs
