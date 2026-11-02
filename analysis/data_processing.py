@@ -3,22 +3,18 @@ import pandas as pd
 
 def clean_housing_data(housing):
     """Step 1a: Keep the original dates, signed nonzero changes, and column names."""
-    housing["first_completion_date"] = pd.to_datetime(housing["first_completion_date"])
-    housing["net_units_completed"] = pd.to_numeric(housing["net_units_completed"])
+    def clean_housing_data(housing):
+    """Filter housing production records completed from 2005 through 2025."""
+    housing = housing.copy()
 
-    in_period = (housing["first_completion_date"] >= "2005-01-01") & (housing["first_completion_date"] < "2026-01-01")
-    valid_units = (~housing["net_units_completed"].isna()) & (housing["net_units_completed"] != 0)
+    housing["First Completion Date"] = pd.to_datetime(housing["First Completion Date"], errors="coerce",)
+    housing["Net Units Completed"] = pd.to_numeric(housing["Net Units Completed"], errors="coerce",)
 
-    selected = housing.loc[in_period & valid_units].copy()
-    
-    housing_production_filtered = selected.rename(columns={
-        "bpa": "BPA", 
-        "address": "Address", 
-        "blocklot": "BlockLot",
-        "net_units_completed": "Net Units Completed",
-        "first_completion_date": "First Completion Date", "latest_completion_date": "Latest Completion Date"
-    })
-    return housing_production_filtered
+    in_period = (housing["First Completion Date"] >= "2005-01-01") & (housing["First Completion Date"] < "2026-01-01")
+
+    valid_units = (housing["Net Units Completed"].notna()) & (housing["Net Units Completed"] != 0)
+
+    return housing.loc[in_period & valid_units].copy()
 
 
 def clean_land_use(land):
