@@ -1,17 +1,11 @@
-"""The notebook's original plot code, enclosed in functions without new plotting rules."""
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 
 def plot_housing_map(tract_production):
-    """Figure 1: Original net housing additions map."""
-    # Visualization 1: Net Housing Additions by Census Tract (2005-2025)
-
-    # Create the map
+    """Figure 1: Net housing additions map."""
     fig, ax = plt.subplots(figsize=(9, 10))
-
-    # Plot net housing additions
+    
     tract_production.plot(
         column="net_units_added_2005_2025",
         cmap="Blues",
@@ -23,18 +17,14 @@ def plot_housing_map(tract_production):
         linewidth=0.4
     )
 
-    # Highlight tracts with negative net housing changes
     tract_production[tract_production["net_units_added_2005_2025"] < 0 ].plot(ax=ax, color="indianred", edgecolor="lightgray")
 
-    # Focus on mainland San Francisco
     ax.set_xlim(-122.53, -122.34)
     ax.set_ylim(37.69, 37.84)
 
-    # Add title and remove axes
     ax.set_title("Net Housing Additions by Census Tract (2005-2025)\nRed = Net Housing Losses",fontsize=14)
     ax.set_axis_off()
 
-    # Save and display
     plt.figtext(0.5, -0.02, "Figure 1. Net housing additions were concentrated in eastern San Francisco during 2005–2025. Darker blue represents larger net increases in housing units, while red identifies census tracts with net housing losses.",
                 ha="center", fontsize=9)
     plt.tight_layout()
@@ -43,22 +33,19 @@ def plot_housing_map(tract_production):
 
 
 def plot_group_comparison(group_comparison, unassigned_net_units):
-    """Figure 2: Original group comparison."""
-    # Figure 2: Net housing additions by recent income and renter-share groups.
+    """Figure 2: Net housing additions by recent income and renter-share groups."""
     fig, axes = plt.subplots(1, 2, figsize=(13, 6), sharey=True)
 
     for ax, dimension, order, title in [
         (axes[0], "income", ["low", "middle", "high", "unclassified"], "By income"),
         (axes[1], "renter", ["low_renter", "middle_renter", "high_renter", "unclassified"], "By renter share")
     ]:
-        # Put categories in the same order on both charts.
         subset = group_comparison.loc[group_comparison["dimension"] == dimension].set_index("group").reindex(order)
         bars = ax.bar([0, 1, 2, 3], subset["net_units"], color=["lightgray", "lightgray", "steelblue", "whitesmoke"], edgecolor="gray")
         ax.set_xticks([0, 1, 2, 3], ["Low", "Middle", "High", "Unclassified"])
         ax.set_title(title)
         ax.set_ylabel("Net housing units" if dimension == "income" else "")
 
-        # Label each bar with net units and its share of the citywide net total.
         for bar, units, share in zip(bars, subset["net_units"], subset["share_city_net_pct"]):
             ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height(),
                     f"{units:,.0f}\n{share:.1f}%", ha="center", va="bottom", fontsize=9)
@@ -71,8 +58,7 @@ def plot_group_comparison(group_comparison, unassigned_net_units):
 
 
 def plot_net_additions_distribution(tract_production):
-    """Figure 3: Original histogram and KDE."""
-    # Histogram: distribution of 2005-2025 net housing additions across tracts
+    """Figure 3: Distribution of 2005-2025 net housing additions across tracts"""
     sns.set_theme(style="whitegrid")
     plt.figure(figsize=(10, 6))
     sns.histplot(tract_production["net_units_added_2005_2025"],bins=30, kde=True, color="steelblue", edgecolor="black")
@@ -91,8 +77,7 @@ def plot_net_additions_distribution(tract_production):
 
 
 def plot_top_tracts(tract_production):
-    """Figure 4: Original top-ten chart."""
-    # Horizontal bars: top 10 tracts by net housing additions, not growth rates
+    """Figure 4: Top 10 Tracts by Net Housing Additions"""
     top_growth = tract_production.nlargest(10, "net_units_added_2005_2025")
     plt.figure(figsize=(11, 6))
     plt.barh(
@@ -110,5 +95,3 @@ def plot_top_tracts(tract_production):
     plt.tight_layout()
     plt.savefig("top_10_net_housing_additions_tracts.png", dpi=300, bbox_inches="tight")
     plt.show()
-
-
