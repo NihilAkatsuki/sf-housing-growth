@@ -3,7 +3,6 @@ import pandas as pd
 
 def clean_housing_data(housing):
     """Step 1a: Keep the original dates, signed nonzero changes, and column names."""
-    def clean_housing_data(housing):
     """Filter housing production records completed from 2005 through 2025."""
     housing = housing.copy()
 
