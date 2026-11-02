@@ -33,24 +33,19 @@ pip install -r requirements.txt
 ```
 
 ### 3. Download the raw datasets
+Download the raw datasets using the link below. These datasets are in `data/raw/`.
 
 [Download Raw Data (ZIP)](https://pub-7accb6becb5d446e8d98976537649e3e.r2.dev/raw_data.zip)
 
 ## Running the Analysis
 
-### 1. Download the raw datasets
-
-Download the raw datasets using the link below. These datasets belong in `data/raw/`.
-
-[Download Raw Data (ZIP)](https://pub-7accb6becb5d446e8d98976537649e3e.r2.dev/raw_data.zip)
-
-### 2. Install dependencies
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the analysis notebook
+### 2. Run the analysis notebook
 
 Open Jupyter Notebook from the project root:
 
@@ -62,7 +57,7 @@ Open `notebooks/SF_Housing_Analysis_TrackB.ipynb` and run all cells sequentially
 
 The notebook imports and calls functions from the Python modules in `analysis/` to perform the full analysis.
 
-### 4. View the outputs
+### 3. View the outputs
 
 The processed datasets are available in `data/processed/`, and the generated figures are saved in `visualizations/`.
 
