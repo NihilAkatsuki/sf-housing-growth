@@ -22,25 +22,36 @@ Install the required Python dependencies:
 pip install -r requirements.txt
 ```
 
-## Download Raw Datasets
-
-Download the raw datasets using the link below and extract the files into `data/raw/`.
-
 [**Download Raw Data (ZIP)**](https://pub-7accb6becb5d446e8d98976537649e3e.r2.dev/raw_data.zip)
 
 ## Running the Analysis
+1. Clone the repository
 
-1. Open Jupyter Notebook or JupyterLab from the project root directory:
+Clone the repository and navigate to its root directory:
 
-```bash
+git clone https://github.com/NihilAkatsuki/sf-housing-growth.git
+cd sf-housing-growth
+2. Download the raw datasets
+
+Download the raw datasets using the link below, these datasets are in data/raw/.
+
+[**Download Raw Data (ZIP)**](https://pub-7accb6becb5d446e8d98976537649e3e.r2.dev/raw_data.zip)
+
+3. Install dependencies
+pip install -r requirements.txt
+4. Run the analysis notebook
+
+Open Jupyter Notebook from the project root:
+
 jupyter notebook
-```
 
-2. Open `notebooks/SF_Housing_Analysis_TrackB.ipynb`.
+Open notebooks/SF_Housing_Analysis_TrackB.ipynb and run all cells sequentially from top to bottom.
 
-3. Run all cells sequentially from top to bottom. The notebook imports and calls functions from the Python modules in `analysis/` to perform the full analysis.
+The notebook imports and calls functions from the Python modules in `analysis/` to perform the full analysis.
 
-4. The processed datasets are available in `data/processed/`, and the generated figures are saved in `visualizations/`.
+5. View the outputs
+
+The processed datasets are available in `data/processed/`, and the generated figures are saved in `visualizations/`.
 
 ## Outputs
 
