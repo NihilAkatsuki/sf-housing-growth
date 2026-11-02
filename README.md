@@ -1,6 +1,7 @@
 # Housing Growth, Neighborhood Inequality, and Zoning Capacity in San Francisco - Midterm
 
 **Team Members:** Tanushri Pinjala, Luoqi Wang, Colton Gao
+
 **Group Number:** 24
 
 ## Project Structure
