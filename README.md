@@ -14,6 +14,7 @@
   - `comparisons.py` — Functions for summarizing and comparing housing production across income and renter-share groups.
 - `notebooks/` — Contains `SF_Housing_Analysis_TrackB.ipynb`, the main notebook that runs the analysis.
 - `visualizations/` — Generated figures and maps referenced in the Midterm PDF.
+- `Group_24_midterm.pdf` — Written report for the midterm.
 
 ## Setup
 
