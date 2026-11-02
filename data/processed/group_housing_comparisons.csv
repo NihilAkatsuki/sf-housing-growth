@@ -1,0 +1,11 @@
+group,tracts,production_records,net_units,dimension,share_city_net_pct
+high,78,2054,22495,income,38.79652305888035
+low,78,1560,15562,income,26.839363940533268
+middle,78,2312,17528,income,30.23007140146942
+unclassified,10,33,1571,income,2.709461557034942
+high_renter,78,1416,27660,renter,47.70446000482909
+low_renter,78,2431,7669,renter,13.22651857473009
+middle_renter,78,2079,20256,renter,34.93497982132386
+unclassified,10,33,1571,renter,2.709461557034942
+unassigned_to_tract,0,22,826,income,1.4245800420820254
+unassigned_to_tract,0,22,826,renter,1.4245800420820254
