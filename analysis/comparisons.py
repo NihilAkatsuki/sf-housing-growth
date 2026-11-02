@@ -1,4 +1,4 @@
-"""Repeated group-comparison calculations from the original notebook."""
+"""Repeated group-comparison calculations from the analysis notebook."""
 
 import pandas as pd
 
