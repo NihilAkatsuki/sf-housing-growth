@@ -43,14 +43,15 @@ Download the raw datasets using the link below. These datasets are in `data/raw/
 
 ### 1. Run the analysis notebook
 
-Open Jupyter Notebook from the project root:
+Open Jupyter Notebook from the project's  `notebooks/` directory:
 
 ```bash
+cd notebooks
 jupyter notebook
 ```
+Open `SF_Housing_Analysis_TrackB.ipynb` and select Kernel → Restart & Run All.
 
-Open `notebooks/SF_Housing_Analysis_TrackB.ipynb` and run all cells sequentially from top to bottom.
-
+The first notebook cell uses %cd .. to switch to the repository root, allowing all relative paths to data/ and imports from analysis/ to work correctly.
 The notebook imports and calls functions from the Python modules in `analysis/` to perform the full analysis.
 
 ### 2. View the outputs
